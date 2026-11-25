@@ -1,0 +1,5 @@
+.php-cs-cache
+
+# La base de datos se crea sola desde database/schema.sql
+database/*.sqlite
+database/*.sqlite-journal
