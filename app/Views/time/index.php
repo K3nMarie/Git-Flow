@@ -7,7 +7,7 @@
     <tbody>
     <?php if (!$entries): ?><tr><td colspan="3" class="muted">Aún no hay sesiones.</td></tr><?php endif; ?>
     <?php foreach ($entries as $en): ?>
-      <tr><td><?= e(date('d/m/Y', strtotime($en['entry_date']))) ?></td><td><?= fmt_duration((int)$en['study_seconds']) ?></td><td><?= fmt_duration((int)$en['break_seconds']) ?></td></tr>
+      <tr><td><?= e(fmt_date($en['entry_date'])) ?></td><td><?= fmt_duration((int)$en['study_seconds']) ?></td><td><?= fmt_duration((int)$en['break_seconds']) ?></td></tr>
     <?php endforeach; ?>
     </tbody>
   </table>
