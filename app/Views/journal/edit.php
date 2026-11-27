@@ -1,5 +1,5 @@
 <?php $prev = date('Y-m-d', strtotime("$date -1 day")); $next = date('Y-m-d', strtotime("$date +1 day")); ?>
-<div class="page-head"><h2>Journal — <?= e(date('d/m/Y', strtotime($date))) ?></h2>
+<div class="page-head"><h2>Journal — <?= e(fmt_date($date, true)) ?></h2>
   <div class="actions"><a class="btn" href="/journal/<?= $prev ?>">‹ Día anterior</a><a class="btn" href="/journal/<?= $next ?>">Día siguiente ›</a></div></div>
 <form method="post" action="/journal/<?= e($date) ?>" class="card form-col">
   <?= \App\Core\Auth::field() ?>

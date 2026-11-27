@@ -13,7 +13,7 @@
 <?php if (!$days): ?><p class="muted">Aún no hay moods registrados.</p><?php endif; ?>
 <?php foreach ($days as $date => $moods): ?>
   <div class="card">
-    <strong><?= e($date) ?></strong>
+    <strong><?= e(fmt_date($date, true)) ?></strong>
     <ul>
       <?php foreach ($moods as $m): ?>
         <li><?= e(fmt_time($m['mood_time'])) ?> · <?= e($m['mood']) ?></li>

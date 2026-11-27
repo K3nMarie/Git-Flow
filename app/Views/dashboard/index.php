@@ -1,5 +1,5 @@
 <?php $names = \App\Core\Application::config('days'); ?>
-<div class="page-head"><h2>Esta semana</h2><p class="muted"><?= e(date('d/m/Y')) ?></p></div>
+<div class="page-head"><h2>Esta semana</h2><p class="muted"><?= e(fmt_date(date('Y-m-d'), true)) ?></p></div>
 
 <div class="quick">
   <a class="card q" href="/journal"><b>Escribir hoy</b><small>Abrir el journal de hoy</small></a>

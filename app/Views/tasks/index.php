@@ -21,7 +21,7 @@
       <td><?= (int)$t['id'] ?></td>
       <td><?= e($t['task_name']) ?></td>
       <td><?= e($t['task_description']) ?></td>
-      <td><?= e(date('d/m/Y', strtotime($t['due_date']))) ?></td>
+      <td><?= e(fmt_date($t['due_date'])) ?></td>
       <td>
         <form method="post" action="/tasks/<?= (int)$t['id'] ?>/status" class="mini">
           <?= \App\Core\Auth::field() ?>
