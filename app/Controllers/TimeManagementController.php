@@ -25,7 +25,7 @@ class TimeManagementController extends Controller
             'day' => (int)$n->format('j'),
             'month' => (int)$n->format('n'),
             'year' => (int)$n->format('Y'),
-            'full_date' => $n->format('d/m/Y'),
+            'full_date' => fmt_date($n->format('Y-m-d')),
             'hour' => (int)$n->format('G'),
             'minute' => (int)$n->format('i'),
             'second' => (int)$n->format('s'),
